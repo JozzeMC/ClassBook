@@ -1,1 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Product - Amazon Style</title>
+    
+</head>
+<body>
 
+<div class="main-container">
+    <div class="left-col">
+        <div class="img-zoom-container" id="zoom-area">
+            <img id="main-img" src="Contra Portada - Libro Adorable Animals.png" alt="Cover">
+            <div id="zoom-result" class="img-zoom-result"></div>
+        </div>
+    </div>
+
+    <div class="center-col">
+        <h1 class="title">Adorable Animals Coloring Book: 40 Cute and Fun Illustrations for Kids Ages 4+, Large Simple Designs for Boys and Girls, Single-Sided Pages to Prevent Bleed-Through</h1>
+        <div class="author">by JFMC Coloring Books</div>
+        <p style="font-size: 14px;"><strong>Descripción:</strong><b>Unlock a world of fun, learning, and creativity for your little ones!</b></p>
+
+<p>Published by <b>JFMC Coloring Books</b>, this <i>Cute Animals Coloring Book</i> is specially designed for children aged 5 and up. Featuring a delightful cast of characters—from wise owls to playful raccoons—this book is the perfect screen-free activity to boost imagination and focus.</p>
+
+<p><b>Why Parents and Teachers Love This Book:</b></p>
+
+<ul>
+    <li><b>40 Unique Illustrations:</b> A wide variety of adorable animals designed with thick lines, perfect for crayons, colored pencils, or markers.</li>
+    <li><b>Single-Sided Pages:</b> Every image is placed on its own page with a blank back to prevent bleed-through and allow for easy removal and display.</li>
+    <li><b>Skill Building:</b> Helps develop fine motor skills, hand-eye coordination, and concentration in young learners.</li>
+    <li><b>Bonus Learning:</b> Each page includes the animal's name in "color-it-in" outline fonts, helping children practice letter recognition and spelling while they play!</li>
+    <li><b>The Perfect Gift:</b> Ideal for birthdays, holidays, or as a travel companion for long car rides and flights.</li>
+</ul>
+
+<p><b>Give your child the gift of creativity. Add to cart and start coloring today!</b></p>
+    </div>
+
+    <div class="right-col">
+        <div class="formats-box">
+            <button class="format-btn" onclick="updatePrice('Kindle', 7.99, this)">
+                <div>Kindle</div><div class="p-small">$7.99</div>
+            </button>
+            <button class="format-btn active" onclick="updatePrice('Paperback', 9.99, this)">
+                <div>Paperback</div><div class="p-small">$9.99</div>
+            </button>
+            <button class="format-btn" onclick="updatePrice('Hardcover', 22.99, this)">
+                <div>Hardcover</div><div class="p-small">$22.99</div>
+            </button>
+        </div>
+
+        <div class="purchase-card">
+            <div class="price-display">$<span id="current-price">16.99</span></div>
+            <div style="font-size: 13px; color: #565959;">FREE delivery in 4-5 days.</div>
+            
+            <label style="font-size: 13px; display: block; margin-top: 10px;">Quantity:</label>
+            <select id="qty" style="width: 100%; margin-bottom: 10px;">
+                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>
+            </select>
+
+            <button class="btn-buy" onclick="openModal()">Buy now</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modal">
+    <div class="modal-content">
+        <span class="close-x" onclick="closeModal()">&times;</span>
+        <h2 style="color: #007600;">Confirmed Order!</h2>
+        <hr>
+        <p id="summary-text"></p>
+        <p><strong>Estimated time:</strong> 5 business days</p>
+        <button class="btn-close" onclick="closeModal()">Close</button>
+    </div>
+</div>
+
+
+
+</body>
+</html>
